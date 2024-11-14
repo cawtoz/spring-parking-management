@@ -1,7 +1,7 @@
 package com.github.cawtoz.parking.service;
 
-import com.github.cawtoz.parking.model.CustomUserDetails;
-import com.github.cawtoz.parking.model.User;
+import com.github.cawtoz.parking.model.security.CustomUserDetails;
+import com.github.cawtoz.parking.model.security.User;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationServiceException;
