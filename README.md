@@ -11,5 +11,8 @@ Web application designed to manage parking lots. It allows users to register veh
 - Java
 - Spring Boot (JPA, Web, Security)
 - Thymeleaf
+- HTML
+- CCS
+- JavaScript
 - Bootstrap
 - MySQL
