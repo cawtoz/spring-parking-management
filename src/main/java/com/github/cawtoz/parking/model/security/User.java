@@ -1,5 +1,6 @@
-package com.github.cawtoz.parking.model;
+package com.github.cawtoz.parking.model.security;
 
+import com.github.cawtoz.parking.model.Parking;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -29,5 +30,8 @@ public class User {
     private String surname;
     private String phone;
 
-}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parking_id", nullable = false)
+    private Parking parking;
 
+}

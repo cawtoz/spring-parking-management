@@ -1,5 +1,6 @@
-package com.github.cawtoz.parking.model;
+package com.github.cawtoz.parking.model.security;
 
+import com.github.cawtoz.parking.model.Parking;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -15,6 +16,7 @@ public class CustomUserDetails implements UserDetails {
     private final String name;
     private final String surname;
     private final String phone;
+    private final Parking parking;
     private final Collection<? extends GrantedAuthority> authorities;
 
     public CustomUserDetails(User user) {
@@ -24,6 +26,8 @@ public class CustomUserDetails implements UserDetails {
         this.name = user.getName();
         this.surname = user.getSurname();
         this.phone = user.getPhone();
+        System.out.println(user.getParking());
+        this.parking = user.getParking();
         this.authorities = AuthorityUtils.createAuthorityList(user.getRole().name());
     }
 
