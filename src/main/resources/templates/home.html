@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Bootslander Bootstrap Template</title>
+  <title>AutoPark</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -17,16 +17,14 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Main CSS File -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
   <link href="/assets/css/main.css" rel="stylesheet">
-
   <!-- =======================================================
   * Template Name: Bootslander
   * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
@@ -44,35 +42,18 @@
     <a href="index.html" class="logo d-flex align-items-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="/assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Bootslander</h1>
+      <h1 class="sitename">AutoPark</h1>
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero" class="active">Inicio</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#features">Características</a></li>
+        <li><a href="#details">Detalle</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
@@ -84,23 +65,27 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero section dark-background">
-    <img src="/assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
+    <img src="/assets/img/hero-bg-2.jpg" alt="Imagen de fondo" class="hero-bg">
 
     <div class="container">
       <div class="row gy-4 justify-content-between">
         <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-          <img src="/assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="/assets/img/hero-img.png" class="img-fluid animated" alt="Imagen de AutoPark">
         </div>
 
-        <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
-          <h1>Build Your Landing Page With <span>Bootslander</span></h1>
-          <p>We are team of talented designers making websites with Bootstrap</p>
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
+          <h1>Gestiona tu Parqueadero con <span>AutoPark</span></h1>
+          <p>La plataforma inteligente para monitorear entradas y salidas, gestionar disponibilidad, y procesar pagos en parqueaderos, todo en tiempo real.</p>
           <div class="d-flex">
-            <a href="#about" class="btn-get-started">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="/login" class="btn-get-started">Ingresar</a>
+            <a href="https://tinyurl.com/29wosdu4" class="glightbox btn-watch-video d-flex align-items-center">
+              <i class="bi bi-play-circle"></i><span>Avatar</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center">
+              <i class="bi bi-play-circle"></i><span>Ver Video</span>
+            </a>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -128,10 +113,10 @@
       <div class="row align-items-xl-center gy-5">
 
         <div class="col-xl-5 content">
-          <h3>About Us</h3>
-          <h2>Ducimus rerum libero reprehenderit cumque</h2>
-          <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti soluta.</p>
-          <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          <h3>Sobre Nosotros</h3>
+          <h2>AutoPark: Soluciones Inteligentes para Parqueaderos</h2>
+          <p>AutoPark es una plataforma innovadora diseñada para optimizar la gestión de parqueaderos. Con nuestras herramientas inteligentes, puedes controlar el flujo de vehículos, gestionar la disponibilidad en tiempo real y asegurar una experiencia sin complicaciones para los usuarios.</p>
+          <a href="#details" class="read-more"><span>Más Información</span><i class="bi bi-arrow-right"></i></a>
         </div>
 
         <div class="col-xl-7">
@@ -140,32 +125,32 @@
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div class="icon-box">
                 <i class="bi bi-buildings"></i>
-                <h3>Eius provident</h3>
-                <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+                <h3>Control de Accesos</h3>
+                <p>Gestión eficiente de entradas y salidas, con monitoreo en tiempo real para mejorar la seguridad y control.</p>
               </div>
             </div> <!-- End Icon Box -->
 
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div class="icon-box">
                 <i class="bi bi-clipboard-pulse"></i>
-                <h3>Rerum aperiam</h3>
-                <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
+                <h3>Disponibilidad en Tiempo Real</h3>
+                <p>Información actualizada de los espacios disponibles, para que los usuarios encuentren lugar sin dificultades.</p>
               </div>
             </div> <!-- End Icon Box -->
 
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
               <div class="icon-box">
                 <i class="bi bi-command"></i>
-                <h3>Veniam omnis</h3>
-                <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
+                <h3>Facilidad de Uso</h3>
+                <p>Interfaz intuitiva que facilita el acceso a todas las funciones del sistema, permitiendo una gestión sin complicaciones.</p>
               </div>
             </div> <!-- End Icon Box -->
 
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
               <div class="icon-box">
                 <i class="bi bi-graph-up-arrow"></i>
-                <h3>Delares sapiente</h3>
-                <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
+                <h3>Estadísticas y Reportes</h3>
+                <p>Obtén reportes detallados sobre el uso y rendimiento del parqueadero para una toma de decisiones informada.</p>
               </div>
             </div> <!-- End Icon Box -->
 
@@ -187,84 +172,84 @@
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="features-item">
             <i class="bi bi-eye" style="color: #ffbb2c;"></i>
-            <h3><a href="" class="stretched-link">Lorem Ipsum</a></h3>
+            <h3><a href="#features" class="stretched-link">Monitoreo en Tiempo Real</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="features-item">
             <i class="bi bi-infinity" style="color: #5578ff;"></i>
-            <h3><a href="" class="stretched-link">Dolor Sitema</a></h3>
+            <h3><a href="#features" class="stretched-link">Gestión de Espacios</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="features-item">
             <i class="bi bi-mortarboard" style="color: #e80368;"></i>
-            <h3><a href="" class="stretched-link">Sed perspiciatis</a></h3>
+            <h3><a href="#features" class="stretched-link">Interfaz Intuitiva</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
           <div class="features-item">
             <i class="bi bi-nut" style="color: #e361ff;"></i>
-            <h3><a href="" class="stretched-link">Magni Dolores</a></h3>
+            <h3><a href="#features" class="stretched-link">Integración de Seguridad</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
           <div class="features-item">
             <i class="bi bi-shuffle" style="color: #47aeff;"></i>
-            <h3><a href="" class="stretched-link">Nemo Enim</a></h3>
+            <h3><a href="#features" class="stretched-link">Optimización de Rutas</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
           <div class="features-item">
             <i class="bi bi-star" style="color: #ffa76e;"></i>
-            <h3><a href="" class="stretched-link">Eiusmod Tempor</a></h3>
+            <h3><a href="#features" class="stretched-link">Reservas de Espacios</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
           <div class="features-item">
             <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
-            <h3><a href="" class="stretched-link">Midela Teren</a></h3>
+            <h3><a href="#features" class="stretched-link">Reportes y Análisis</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
           <div class="features-item">
             <i class="bi bi-camera-video" style="color: #4233ff;"></i>
-            <h3><a href="" class="stretched-link">Pira Neve</a></h3>
+            <h3><a href="#features" class="stretched-link">Sistema de Videovigilancia</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
           <div class="features-item">
             <i class="bi bi-command" style="color: #b2904f;"></i>
-            <h3><a href="" class="stretched-link">Dirada Pack</a></h3>
+            <h3><a href="#features" class="stretched-link">Control de Acceso</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
           <div class="features-item">
             <i class="bi bi-dribbble" style="color: #b20969;"></i>
-            <h3><a href="" class="stretched-link">Moton Ideal</a></h3>
+            <h3><a href="#features" class="stretched-link">Soporte Multidispositivo</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
           <div class="features-item">
             <i class="bi bi-activity" style="color: #ff5828;"></i>
-            <h3><a href="" class="stretched-link">Verdo Park</a></h3>
+            <h3><a href="#features" class="stretched-link">Alertas en Tiempo Real</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
         <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
           <div class="features-item">
             <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
-            <h3><a href="" class="stretched-link">Flavor Nivelanda</a></h3>
+            <h3><a href="#features" class="stretched-link">Personalización Avanzada</a></h3>
           </div>
         </div><!-- End Feature Item -->
 
@@ -274,130 +259,82 @@
 
   </section><!-- /Features Section -->
 
-  <!-- Stats Section -->
-  <section id="stats" class="stats section light-background">
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-emoji-smile"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Happy Clients</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-journal-richtext"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-headset"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-        <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-          <i class="bi bi-people"></i>
-          <div class="stats-item">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-        </div><!-- End Stats Item -->
-
-      </div>
-
-    </div>
-
-  </section><!-- /Stats Section -->
-
   <!-- Details Section -->
   <section id="details" class="details section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Details</h2>
-      <div><span>Check Our</span> <span class="description-title">Details</span></div>
+      <h2>Detalles</h2>
+      <div><span>Descubre nuestros</span> <span class="description-title">Detalles</span></div>
     </div><!-- End Section Title -->
 
     <div class="container">
 
+      <!-- Misión Item -->
       <div class="row gy-4 align-items-center features-item">
         <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-          <img src="/assets/img/details-1.png" class="img-fluid" alt="">
+          <img src="/assets/img/details-1.png" class="img-fluid" alt="Misión">
         </div>
         <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <h3>Misión</h3>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Nuestra misión es ofrecer un sistema innovador y accesible para la gestión de parqueaderos, optimizando el uso de los espacios disponibles y mejorando la experiencia de nuestros usuarios.
           </p>
           <ul>
-            <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-            <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-            <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span></li>
+            <li><i class="bi bi-check"></i><span> Optimizar el uso de los parqueaderos disponibles.</span></li>
+            <li><i class="bi bi-check"></i><span> Brindar una experiencia de usuario intuitiva y eficaz.</span></li>
+            <li><i class="bi bi-check"></i><span> Mejorar la eficiencia en la gestión del espacio y el tiempo.</span></li>
           </ul>
         </div>
-      </div><!-- Features Item -->
+      </div><!-- Misión Item -->
 
+      <!-- Visión Item -->
       <div class="row gy-4 align-items-center features-item">
         <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-          <img src="/assets/img/details-2.png" class="img-fluid" alt="">
+          <img src="/assets/img/details-2.png" class="img-fluid" alt="Visión">
         </div>
         <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-          <h3>Corporis temporibus maiores provident</h3>
+          <h3>Visión</h3>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Nuestra visión es ser líderes en el sector de gestión de parqueaderos, brindando soluciones tecnológicas sostenibles que faciliten la vida urbana y promuevan un uso eficiente de los espacios.
           </p>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            A través de la innovación continua y el compromiso con la sostenibilidad, buscamos expandir nuestras soluciones a nivel global, transformando la manera en que las ciudades gestionan los parqueaderos.
           </p>
         </div>
-      </div><!-- Features Item -->
+      </div><!-- Visión Item -->
 
+      <!-- Valores Item -->
       <div class="row gy-4 align-items-center features-item">
         <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-          <img src="/assets/img/details-3.png" class="img-fluid" alt="">
+          <img src="/assets/img/details-3.png" class="img-fluid" alt="Valores">
         </div>
         <div class="col-md-7" data-aos="fade-up">
-          <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-          <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+          <h3>Valores</h3>
+          <p>Nos guiamos por principios fundamentales que nos permiten ofrecer un servicio de calidad mientras promovemos el bienestar de nuestros usuarios y el respeto por el entorno.</p>
           <ul>
-            <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-            <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-            <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
+            <li><i class="bi bi-check"></i> <span>Innovación constante en nuestras soluciones.</span></li>
+            <li><i class="bi bi-check"></i><span> Compromiso con la eficiencia y la sostenibilidad.</span></li>
+            <li><i class="bi bi-check"></i> <span>Responsabilidad social y ética en cada acción.</span></li>
           </ul>
         </div>
-      </div><!-- Features Item -->
+      </div><!-- Valores Item -->
 
+      <!-- Compromiso Item -->
       <div class="row gy-4 align-items-center features-item">
         <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-          <img src="/assets/img/details-4.png" class="img-fluid" alt="">
+          <img src="/assets/img/details-4.png" class="img-fluid" alt="Compromiso">
         </div>
         <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-          <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+          <h3>Compromiso</h3>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Estamos comprometidos con la mejora continua de nuestros servicios, garantizando la satisfacción total de nuestros usuarios y colaboradores.
           </p>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            Fomentamos relaciones a largo plazo, basadas en la confianza, la transparencia y la responsabilidad, asegurando siempre el éxito y la eficiencia de cada operación.
           </p>
         </div>
-      </div><!-- Features Item -->
+      </div><!-- Compromiso Item -->
 
     </div>
 
@@ -409,7 +346,7 @@
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
       <h2>Gallery</h2>
-      <div><span>Check Our</span> <span class="description-title">Gallery</span></div>
+      <div><span>Dale un</span> <span class="description-title">Vistazo</span></div>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -514,14 +451,14 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               <img src="/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
+              <h3>Fernando Martínez</h3>
+              <h4>Propietario de Estacionamiento</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
                 <i class="bi bi-quote quote-icon-left"></i>
-                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                <span>"La facilidad de administración del sistema y su interfaz amigable nos ha permitido ofrecer un servicio más organizado y eficiente a nuestros usuarios. ¡Altamente recomendable!"</span>
                 <i class="bi bi-quote quote-icon-right"></i>
               </p>
             </div>
@@ -530,14 +467,14 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               <img src="/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
+              <h3>Laura García</h3>
+              <h4>Gerente de Parqueaderos</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
                 <i class="bi bi-quote quote-icon-left"></i>
-                <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                <span>"El sistema ha transformado la manera en que gestionamos nuestros parqueaderos. Es fácil de usar, eficiente y nos ha permitido mejorar la experiencia de nuestros clientes."</span>
                 <i class="bi bi-quote quote-icon-right"></i>
               </p>
             </div>
@@ -546,14 +483,14 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               <img src="/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
+              <h3>Patricia Ramírez</h3>
+              <h4>Directora de Operaciones</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
                 <i class="bi bi-quote quote-icon-left"></i>
-                <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                <span>"Desde que implementamos el sistema, la gestión de parqueaderos es mucho más sencilla. Además, la atención al cliente ha mejorado considerablemente, gracias a las notificaciones automáticas."</span>
                 <i class="bi bi-quote quote-icon-right"></i>
               </p>
             </div>
@@ -562,14 +499,14 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               <img src="/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
+              <h3>Carlos Pérez</h3>
+              <h4>Administrador de Parqueadero</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
                 <i class="bi bi-quote quote-icon-left"></i>
-                <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                <span>"El sistema ha reducido el tiempo de espera de nuestros clientes y ha mejorado la eficiencia en la gestión de los espacios disponibles. Una inversión que vale la pena."</span>
                 <i class="bi bi-quote quote-icon-right"></i>
               </p>
             </div>
@@ -578,14 +515,14 @@
           <div class="swiper-slide">
             <div class="testimonial-item">
               <img src="/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
+              <h3>José Luis Fernández</h3>
+              <h4>Empresario</h4>
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
               </div>
               <p>
                 <i class="bi bi-quote quote-icon-left"></i>
-                <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                <span>"El sistema de administración ha facilitado la asignación de espacios en nuestros parqueaderos, lo que ha optimizado las operaciones diarias y mejorado la satisfacción de nuestros clientes."</span>
                 <i class="bi bi-quote quote-icon-right"></i>
               </p>
             </div>
@@ -599,140 +536,71 @@
 
   </section><!-- /Testimonials Section -->
 
-  <!-- Team Section -->
-  <section id="team" class="team section">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Team</h2>
-      <div><span>Check Our</span> <span class="description-title">Team</span></div>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-
-      <div class="row gy-5">
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="member">
-            <div class="pic"><img src="/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="member">
-            <div class="pic"><img src="/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
-            <div class="pic"><img src="/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-            <div class="member-info">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-      </div>
-
-    </div>
-
-  </section><!-- /Team Section -->
-
   <!-- Pricing Section -->
   <section id="pricing" class="pricing section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Pricing</h2>
-      <div><span>Check Our</span> <span class="description-title">Pricing</span></div>
+      <h2>Planes de Precios</h2>
+      <div><span>Consulta nuestros</span> <span class="description-title">Planes</span></div>
     </div><!-- End Section Title -->
 
     <div class="container">
 
       <div class="row gy-4">
 
+        <!-- Free Plan -->
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="pricing-item">
-            <h3>Free Plan</h3>
-            <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-            <h4><sup>$</sup>0<span> / month</span></h4>
-            <a href="#" class="cta-btn">Start a free trial</a>
-            <p class="text-center small">No credit card required</p>
+            <h3>Plan Gratuito</h3>
+            <p class="description">Acceso a funciones básicas para pequeños proyectos o usuarios ocasionales.</p>
+            <h4><sup>$</sup>0<span> / mes</span></h4>
+            <a href="#pricing" class="cta-btn">Comienza una prueba gratuita</a>
+            <p class="text-center small">No se requiere tarjeta de crédito</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
+              <li><i class="bi bi-check"></i> <span>Acceso limitado a 10 espacios de estacionamiento</span></li>
+              <li><i class="bi bi-check"></i> <span>Soporte básico vía email</span></li>
+              <li><i class="bi bi-check"></i> <span>Acceso a informes mensuales</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Acceso a estadísticas avanzadas</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Integración con otras plataformas</span></li>
             </ul>
           </div>
         </div><!-- End Pricing Item -->
 
+        <!-- Business Plan -->
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="pricing-item featured">
             <p class="popular">Popular</p>
-            <h3>Business Plan</h3>
-            <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-            <h4><sup>$</sup>29<span> / month</span></h4>
-            <a href="#" class="cta-btn">Start a free trial</a>
-            <p class="text-center small">No credit card required</p>
+            <h3>Plan Empresarial</h3>
+            <p class="description">Para empresas que necesitan gestionar múltiples espacios de estacionamiento.</p>
+            <h4><sup>$</sup>29<span> / mes</span></h4>
+            <a href="#pricing" class="cta-btn">Comienza una prueba gratuita</a>
+            <p class="text-center small">No se requiere tarjeta de crédito</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-              <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-              <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-              <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
+              <li><i class="bi bi-check"></i> <span>Hasta 50 espacios de estacionamiento</span></li>
+              <li><i class="bi bi-check"></i> <span>Soporte prioritario vía chat en vivo</span></li>
+              <li><i class="bi bi-check"></i> <span>Acceso a informes diarios</span></li>
+              <li><i class="bi bi-check"></i> <span>Integración con plataformas de pago</span></li>
+              <li><i class="bi bi-check"></i> <span>Acceso a estadísticas avanzadas</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Funciones de personalización avanzadas</span></li>
             </ul>
           </div>
         </div><!-- End Pricing Item -->
 
+        <!-- Developer Plan -->
         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
           <div class="pricing-item">
-            <h3>Developer Plan</h3>
-            <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-            <h4><sup>$</sup>49<span> / month</span></h4>
-            <a href="#" class="cta-btn">Start a free trial</a>
-            <p class="text-center small">No credit card required</p>
+            <h3>Plan Desarrollador</h3>
+            <p class="description">Para desarrolladores que necesitan integraciones personalizadas y acceso a la API.</p>
+            <h4><sup>$</sup>49<span> / mes</span></h4>
+            <a href="#pricing" class="cta-btn">Comienza una prueba gratuita</a>
+            <p class="text-center small">No se requiere tarjeta de crédito</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-              <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-              <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-              <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-              <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-              <li><i class="bi bi-check"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
+              <li><i class="bi bi-check"></i> <span>Acceso completo a la API de parqueadero</span></li>
+              <li><i class="bi bi-check"></i> <span>Soporte personalizado para desarrolladores</span></li>
+              <li><i class="bi bi-check"></i> <span>Integración avanzada con plataformas externas</span></li>
+              <li><i class="bi bi-check"></i> <span>Acceso a todas las estadísticas y reportes</span></li>
+              <li><i class="bi bi-check"></i> <span>Soporte técnico en tiempo real</span></li>
             </ul>
           </div>
         </div><!-- End Pricing Item -->
@@ -743,71 +611,13 @@
 
   </section><!-- /Pricing Section -->
 
-  <!-- Faq Section -->
-  <section id="faq" class="faq section light-background">
-
-    <div class="container-fluid">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-
-          <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-            <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            </p>
-          </div>
-
-          <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-item faq-active">
-              <i class="faq-icon bi bi-question-circle"></i>
-              <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-              <div class="faq-content">
-                <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div><!-- End Faq item-->
-
-            <div class="faq-item">
-              <i class="faq-icon bi bi-question-circle"></i>
-              <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
-              <div class="faq-content">
-                <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div><!-- End Faq item-->
-
-            <div class="faq-item">
-              <i class="faq-icon bi bi-question-circle"></i>
-              <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-              <div class="faq-content">
-                <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div><!-- End Faq item-->
-
-          </div>
-
-        </div>
-
-        <div class="col-lg-5 order-1 order-lg-2">
-          <img src="/assets/img/faq.jpg" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
-        </div>
-      </div>
-
-    </div>
-
-  </section><!-- /Faq Section -->
-
   <!-- Contact Section -->
   <section id="contact" class="contact section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Contact</h2>
-      <div><span>Check Our</span> <span class="description-title">Contact</span></div>
+      <h2>Contacto</h2>
+      <div><span>¡Hablemos!</span></div>
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade" data-aos-delay="100">
@@ -818,24 +628,24 @@
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-geo-alt flex-shrink-0"></i>
             <div>
-              <h3>Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <h3>Dirección</h3>
+              <p>Calle 123, Bucaramanga, Colombia</p>
             </div>
           </div><!-- End Info Item -->
 
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-telephone flex-shrink-0"></i>
             <div>
-              <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
+              <h3>Teléfono</h3>
+              <p>+57 123 456 789</p>
             </div>
           </div><!-- End Info Item -->
 
           <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
-              <h3>Email Us</h3>
-              <p>info@example.com</p>
+              <h3>Email</h3>
+              <p>info@autopark.com</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -846,27 +656,27 @@
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required="">
               </div>
 
-              <div class="col-md-6 ">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-              </div>
-
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Tu Correo" required="">
               </div>
 
               <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                <input type="text" class="form-control" name="subject" placeholder="Asunto" required="">
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
               </div>
 
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
+                <div class="loading">Cargando</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">¡Tu mensaje ha sido enviado! Gracias.</div>
 
-                <button type="submit">Send Message</button>
+                <button type="submit">Enviar Mensaje</button>
               </div>
 
             </div>
@@ -887,52 +697,52 @@
     <div class="row gy-4">
       <div class="col-lg-4 col-md-6 footer-about">
         <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename">Bootslander</span>
+          <span class="sitename">AutoPark</span>
         </a>
         <div class="footer-contact pt-3">
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <p>Calle 123</p>
+          <p>Bucaramanga, Colombia</p>
+          <p class="mt-3"><strong>Teléfono:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@autopark.com</span></p>
         </div>
         <div class="social-links d-flex mt-4">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href="#footer"><i class="bi bi-twitter-x"></i></a>
+          <a href="#footer"><i class="bi bi-facebook"></i></a>
+          <a href="#footer"><i class="bi bi-instagram"></i></a>
+          <a href="#footer"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
 
       <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Useful Links</h4>
+        <h4>Enlaces útiles</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Terms of service</a></li>
-          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#about">Sobre nosotros</a></li>
+          <li><a href="#pricing">Servicios</a></li>
+          <li><a href="#footer">Términos de servicio</a></li>
+          <li><a href="#footer">Política de privacidad</a></li>
         </ul>
       </div>
 
       <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Our Services</h4>
+        <h4>Nuestros Servicios</h4>
         <ul>
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Web Development</a></li>
-          <li><a href="#">Product Management</a></li>
-          <li><a href="#">Marketing</a></li>
-          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#footer">Gestión de aparcamientos</a></li>
+          <li><a href="#footer">Desarrollo web</a></li>
+          <li><a href="#footer">Gestión de productos</a></li>
+          <li><a href="#footer">Marketing digital</a></li>
+          <li><a href="#footer">Diseño gráfico</a></li>
         </ul>
       </div>
 
       <div class="col-lg-4 col-md-12 footer-newsletter">
-        <h4>Our Newsletter</h4>
-        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+        <h4>Nuestro Boletín</h4>
+        <p>¡Suscríbete a nuestro boletín y recibe las últimas noticias sobre nuestros productos y servicios!</p>
         <form action="forms/newsletter.php" method="post" class="php-email-form">
-          <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-          <div class="loading">Loading</div>
+          <div class="newsletter-form"><input type="email" name="email" placeholder="Tu correo electrónico"><input type="submit" value="Suscribirse"></div>
+          <div class="loading">Cargando</div>
           <div class="error-message"></div>
-          <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          <div class="sent-message">Tu solicitud de suscripción ha sido enviada. ¡Gracias!</div>
         </form>
       </div>
 
@@ -940,17 +750,18 @@
   </div>
 
   <div class="container copyright text-center mt-4">
-    <p>© <span>Copyright</span> <strong class="px-1 sitename">Bootslander</strong> <span>All Rights Reserved</span></p>
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">AutoPark</strong> <span>Todos los derechos reservados</span></p>
     <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you've purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+      <!-- Todos los enlaces en el pie de página deben permanecer intactos. -->
+      <!-- Puedes eliminar los enlaces solo si has comprado la versión pro. -->
+      <!-- Información de licencias: https://bootstrapmade.com/license/ -->
+      <!-- Compra la versión pro con formulario de contacto PHP/AJAX funcional: [buy-url] -->
+      Diseñado por <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuido por <a href="https://themewagon.com">ThemeWagon</a>
     </div>
   </div>
 
 </footer>
+
 
 <!-- Scroll Top -->
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
