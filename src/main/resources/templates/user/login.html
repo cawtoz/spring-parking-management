@@ -2,26 +2,261 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio de Sesión</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPark - Inicio de Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --default-color: #444444;
+            --heading-color: #040677;
+            --accent-color: #1acc8d;
+            --surface-color: #ffffff;
+            --contrast-color: #ffffff;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--background-color) 0%, #f8f9fa 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--default-color);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(4, 6, 119, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background: var(--surface-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: var(--heading-color);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: none;
+        }
+
+        .logo-container {
+            background: var(--surface-color);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 12px rgba(4, 6, 119, 0.15);
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .card-title {
+            color: var(--contrast-color);
+            font-size: 1.75rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .form-control {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            color: var(--default-color);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(26, 204, 141, 0.15);
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group-text {
+            background: transparent;
+            border: 2px solid #e9ecef;
+            border-right: none;
+            color: var(--default-color);
+        }
+
+        .input-group .form-control {
+            border-left: none;
+        }
+
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: var(--accent-color);
+            border: none;
+            transition: all 0.3s ease;
+            color: var(--contrast-color);
+        }
+
+        .btn-primary:hover {
+            background: #17b37e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 204, 141, 0.2);
+        }
+
+        .alert {
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-link {
+            color: var(--default-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-link:hover {
+            color: var(--accent-color);
+        }
+
+        .divider {
+            margin: 1.5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: #e9ecef;
+            z-index: 1;
+        }
+
+        .divider span {
+            background: var(--surface-color);
+            padding: 0 1rem;
+            color: var(--default-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Custom styles for alerts */
+        .alert-success {
+            background-color: rgba(26, 204, 141, 0.1);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .alert-danger {
+            background-color: rgba(4, 6, 119, 0.1);
+            border-color: var(--heading-color);
+            color: var(--heading-color);
+        }
+    </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
-    <div class="card shadow" style="width: 400px;">
+<body>
+<div class="login-container">
+    <div class="card">
+        <div class="card-header">
+            <div class="logo-container">
+                <i class="fas fa-parking logo-icon"></i>
+            </div>
+            <h1 class="card-title">AutoPark</h1>
+        </div>
         <div class="card-body">
-            <h2 class="card-title text-center">Iniciar Sesión</h2>
+            <div th:if="${success}" class="alert alert-success" role="alert">
+                <i class="fas fa-check-circle me-2"></i>
+                <span th:text="${success}"></span>
+            </div>
+            <div th:if="${error}" class="alert alert-danger" role="alert">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                <span th:text="${error}"></span>
+            </div>
 
-            <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
-            <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+            <form th:action="@{/login}" method="post">
+                <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    <input
+                            name="username"
+                            type="text"
+                            class="form-control"
+                            placeholder="Usuario"
+                            required
+                            autocomplete="username">
+                </div>
 
-            <form th:action="@{/login}" method="post" class="mt-3">
-                <input name="username" type="text" class="form-control mb-3" placeholder="Usuario" required>
-                <input name="password" type="password" class="form-control mb-3" placeholder="Contraseña" required>
-                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    <input
+                            name="password"
+                            type="password"
+                            class="form-control"
+                            placeholder="Contraseña"
+                            required
+                            autocomplete="current-password">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-sign-in-alt me-2"></i>
+                    Iniciar Sesión
+                </button>
             </form>
 
-            <a href="/register" class="btn btn-link mt-3 d-block text-center">¿No tienes una cuenta? Regístrate aquí.</a>
-            <a href="/" class="btn btn-link mt-3 d-block text-center">Inicio</a>
+            <div class="divider">
+                <span>o</span>
+            </div>
+
+            <div class="links-container">
+                <a href="/register" class="btn-link text-center">
+                    <i class="fas fa-user-plus me-2"></i>
+                    ¿No tienes una cuenta? Regístrate aquí
+                </a>
+                <a href="/" class="btn-link text-center">
+                    <i class="fas fa-home me-2"></i>
+                    Volver al Inicio
+                </a>
+            </div>
         </div>
     </div>
+</div>
 </body>
 </html>

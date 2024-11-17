@@ -2,67 +2,289 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPark - Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --default-color: #444444;
+            --heading-color: #040677;
+            --accent-color: #1acc8d;
+            --surface-color: #ffffff;
+            --contrast-color: #ffffff;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--background-color) 0%, #f8f9fa 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--default-color);
+        }
+
+        .register-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(4, 6, 119, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background: var(--surface-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: var(--heading-color);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: none;
+        }
+
+        .logo-container {
+            background: var(--surface-color);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 12px rgba(4, 6, 119, 0.15);
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .card-title {
+            color: var(--contrast-color);
+            font-size: 1.75rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .form-control {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+            color: var(--default-color);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(26, 204, 141, 0.15);
+        }
+
+        .form-label {
+            color: var(--default-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group-text {
+            background: transparent;
+            border: 2px solid #e9ecef;
+            border-right: none;
+            color: var(--default-color);
+        }
+
+        .input-group .form-control {
+            border-left: none;
+        }
+
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: var(--accent-color);
+            border: none;
+            transition: all 0.3s ease;
+            color: var(--contrast-color);
+        }
+
+        .btn-primary:hover {
+            background: #17b37e;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 204, 141, 0.2);
+        }
+
+        .alert {
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .alert-success {
+            background-color: rgba(26, 204, 141, 0.1);
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .alert-danger {
+            background-color: rgba(4, 6, 119, 0.1);
+            border-color: var(--heading-color);
+            color: var(--heading-color);
+        }
+
+        .form-check-input:checked {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-link {
+            color: var(--default-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-link:hover {
+            color: var(--accent-color);
+        }
+
+        .required-field {
+            color: var(--heading-color);
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
-<div class="card shadow" style="width: 400px;">
-    <div class="card-body">
-        <h2 class="card-title text-center">Registro</h2>
+<body>
+<div class="register-container">
+    <div class="card">
+        <div class="card-header">
+            <div class="logo-container">
+                <i class="fas fa-parking logo-icon"></i>
+            </div>
+            <h1 class="card-title">Registro AutoPark</h1>
+        </div>
+        <div class="card-body">
 
-        <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
-        <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
-
-        <form th:action="@{/register}" method="post" class="mt-3">
-            <div class="mb-3">
-                <label for="username" class="form-label">Usuario <span class="text-danger">*</span></label>
-                <input name="username" type="text" class="form-control" id="username" placeholder="Usuario" required>
+            <div th:if="${success}" class="alert alert-success" role="alert">
+                <i class="fas fa-check-circle me-2"></i>
+                <span th:text="${success}"></span>
+            </div>
+            <div th:if="${error}" class="alert alert-danger" role="alert">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                <span th:text="${error}"></span>
             </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="Correo Electrónico" required>
+            <form th:action="@{/register}" method="post" th:object="${user}">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <input th:field="*{username}" type="text" class="form-control" placeholder="Usuario" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <input th:field="*{email}" type="email" class="form-control" placeholder="Correo Electrónico" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-id-card"></i>
+                    </span>
+                    <input th:field="*{name}" type="text" class="form-control" placeholder="Nombre">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-id-card"></i>
+                    </span>
+                    <input th:field="*{surname}" type="text" class="form-control" placeholder="Apellido">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <input th:field="*{phone}" type="text" class="form-control" placeholder="Teléfono">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-parking"></i>
+                    </span>
+                    <input th:field="*{parking.name}" type="text" class="form-control" placeholder="Nombre del Parqueadero" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <input th:field="*{parking.address}" type="text" class="form-control" placeholder="Dirección del Parqueadero" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input th:field="*{password}" type="password" class="form-control" placeholder="Contraseña" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input name="confirmPassword" type="password" class="form-control" placeholder="Confirma Contraseña" required>
+                </div>
+
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        Acepto los <a href="/terms" class="text-decoration-none" style="color: var(--accent-color)">términos y condiciones</a>
+                        <span class="required-field">*</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-user-plus me-2"></i>
+                    Registrarse
+                </button>
+            </form>
+
+            <div class="mt-4 text-center">
+                <a href="/login" class="btn-link">
+                    <i class="fas fa-sign-in-alt me-2"></i>
+                    ¿Ya tienes una cuenta? Inicia sesión aquí
+                </a>
+            </div>
+            <div class="mt-2 text-center">
+                <a href="/" class="btn-link">
+                    <i class="fas fa-home me-2"></i>
+                    Volver al Inicio
+                </a>
             </div>
 
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input name="name" type="text" class="form-control" id="name" placeholder="Nombre">
-            </div>
-
-            <div class="mb-3">
-                <label for="surname" class="form-label">Apellido</label>
-                <input name="surname" type="text" class="form-control" id="surname" placeholder="Apellido">
-            </div>
-
-            <div class="mb-3">
-                <label for="phone" class="form-label">Teléfono</label>
-                <input name="phone" type="text" class="form-control" id="phone" placeholder="Teléfono">
-            </div>
-
-            <div class="mb-3">
-                <label for="password" class="form-label">Contraseña <span class="text-danger">*</span></label>
-                <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Confirma Contraseña <span class="text-danger">*</span></label>
-                <input name="confirmPassword" type="password" class="form-control" id="confirmPassword" placeholder="Confirma Contraseña" required>
-            </div>
-
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="terms" required>
-                <label class="form-check-label" for="terms">
-                    Acepto los <a href="/terms">términos y condiciones</a> <span class="text-danger">*</span>
-                </label>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
-        </form>
-
-        <a href="/login" class="btn btn-link mt-3 d-block text-center">¿Ya tienes una cuenta? Inicia sesión aquí.</a>
-        <a href="/" class="btn btn-link mt-3 d-block text-center">Inicio</a>
+        </div>
     </div>
 </div>
 </body>
 </html>
-
