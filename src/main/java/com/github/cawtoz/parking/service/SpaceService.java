@@ -31,28 +31,36 @@ public class SpaceService {
         spaceRepository.deleteById(id);
     }
 
+    public void deactivateById(Long id) {
+        Space space = findById(id);
+        if (space != null) {
+            space.setActive(false);
+            save(space);
+        }
+    }
+
     public long getTotalSpacesCount(Parking parking) {
-        return spaceRepository.countByParking(parking);
+        return spaceRepository.countByParkingAndIsActive(parking, true);
     }
 
     public long getAvailableSpacesCount(Parking parking) {
-        return spaceRepository.countByParkingAndIsOccupied(parking, false);
+        return spaceRepository.countByParkingAndIsOccupiedAndIsActive(parking, false, true);
     }
 
     public long getOccupiedSpacesCount(Parking parking) {
-        return spaceRepository.countByParkingAndIsOccupied(parking, true);
+        return spaceRepository.countByParkingAndIsOccupiedAndIsActive(parking, true, true);
     }
 
     public List<Space> getSpacesByParking(Parking parking) {
-        return spaceRepository.findByParking(parking);
+        return spaceRepository.findByParkingAndIsActive(parking, true);
     }
 
     public List<Space> getAvailableSpaces(Parking parking) {
-        return spaceRepository.findByParkingAndIsOccupied(parking, false);
+        return spaceRepository.findByParkingAndIsOccupiedAndIsActive(parking, false, true);
     }
 
     public List<Space> getOccupiedSpaces(Parking parking) {
-        return spaceRepository.findByParkingAndIsOccupied(parking, true);
+        return spaceRepository.findByParkingAndIsOccupiedAndIsActive(parking, true, true);
     }
 
 }

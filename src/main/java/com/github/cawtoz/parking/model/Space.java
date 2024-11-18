@@ -18,6 +18,9 @@ public class Space {
     @JoinColumn(name = "parking_id", nullable = false)
     private Parking parking;
 
+    @JoinColumn(nullable = false)
+    private String name;
+
     @ManyToOne
     @JoinColumn(name = "vehicle_type_id", nullable = false)
     private VehicleType vehicleType;
@@ -25,7 +28,10 @@ public class Space {
     @Column(nullable = false)
     private boolean isOccupied = false;
 
-    public Space(Parking parking, VehicleType vehicleType) {
+    @Column(nullable = false)
+    private boolean isActive = true;
+
+    public Space(String name, Parking parking, VehicleType vehicleType) {
         this.parking = parking;
         this.vehicleType = vehicleType;
     }
