@@ -35,7 +35,7 @@ public class SecurityConfig {
 
         http.formLogin(form -> form
                 .loginPage("/login")
-                .defaultSuccessUrl("/admin", true)
+                .defaultSuccessUrl("/admin/dashboard", true)
                 .failureHandler(authenticationFailureHandler())
                 .permitAll()
         );
