@@ -1,0 +1,40 @@
+/* Navbar Styles */
+.navbar-custom {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0a0b5c 100%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-custom .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,0.8) !important;
+    transition: var(--transition-speed);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+.navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: var(--transition-speed);
+    transform: translateX(-50%);
+}
+
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+    width: 80%;
+}

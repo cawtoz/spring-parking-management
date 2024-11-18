@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #040677;
+    --secondary-color: #1acc8d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --background-color: #f8f9fa;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Button */
+.btn-custom {
+    background: var(--secondary-color);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    transition: var(--transition-speed);
+}
+
+.btn-custom:hover {
+    background: #17b37e;
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+    color: white;
+}
+
+/* Custom Container*/
+.custom-container {
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 2rem auto;
+    background: #f8f9fa;
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* Header Section */
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.custom-title {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+
+/* Stats Container Styles */
+.stat-item {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(4, 6, 119, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(4, 6, 119, 0.06);
+  height: 100%;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(4, 6, 119, 0.12);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+  transform: scale(1.1);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  color: #6c757d;
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .custom-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

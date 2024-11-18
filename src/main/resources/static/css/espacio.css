@@ -1,0 +1,56 @@
+/* Iconos personalizados para estadísticas */
+.detail-occupied {
+    background: rgba(220, 53, 69, 0.1); /* Fondo ligeramente rojo */
+    color: var(--danger-color); /* Color rojo para el ícono */
+}
+
+.detail-available {
+    background: rgba(40, 167, 69, 0.1); /* Fondo ligeramente verde */
+    color: var(--success-color); /* Color verde para el ícono */
+}
+
+.detail-timestamp {
+    background: rgba(255, 193, 7, 0.1); /* Fondo ligeramente amarillo */
+    color: var(--warning-color); /* Color amarillo para el ícono */
+}
+
+.detail-vehiclePlate {
+    background: rgba(4, 6, 119, 0.1); /* Fondo ligeramente azul */
+    color: var(--primary-color); /* Color azul para el ícono */
+}
+
+.detail-vehicleOwner {
+    background: rgba(26, 204, 141, 0.1); /* Fondo ligeramente verde agua */
+    color: var(--secondary-color); /* Color verde agua para el ícono */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 2px solid rgba(4, 6, 119, 0.15);
+  border-radius: 0.875rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(26, 204, 141, 0.12);
+}
