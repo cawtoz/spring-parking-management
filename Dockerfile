@@ -15,5 +15,5 @@ RUN ./mvnw clean package -DskipTests && rm -rf ~/.m2/repository
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 COPY --from=build /build/target/*.jar app.jar
-EXPOSE 3001
+EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
