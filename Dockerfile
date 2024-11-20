@@ -1,9 +1,16 @@
-FROM openjdk:21-jdk AS build
-COPY . .
-RUN chmod +x ./mvnw
-RUN ./mvnw clean install -DskipTests
+# Build
+FROM eclipse-temurin:21-jdk-alpine as build
+WORKDIR /build
+COPY .mvn .mvn
+COPY mvnw .
+COPY pom.xml .
+RUN ./mvnw dependency:go-offline
+COPY src ./src
+RUN ./mvnw clean package -DskipTests && rm -rf ~/.m2/repository
 
-FROM openjdk:21-jdk
-EXPOSE 8080
-COPY --from=build /target/spring-parking-management-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+COPY --from=build /build/target/*.jar app.jar
+EXPOSE 3001
+CMD ["java", "-jar", "app.jar"]
