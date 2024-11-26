@@ -2,7 +2,6 @@ package com.github.cawtoz.parking.service;
 
 import com.github.cawtoz.parking.model.Parking;
 import com.github.cawtoz.parking.model.Space;
-import com.github.cawtoz.parking.model.VehicleType;
 import com.github.cawtoz.parking.repository.SpaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
