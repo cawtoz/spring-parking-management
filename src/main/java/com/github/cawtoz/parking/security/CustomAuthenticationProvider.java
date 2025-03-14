@@ -1,4 +1,4 @@
-package com.github.cawtoz.parking.config;
+package com.github.cawtoz.parking.security;
 
 import com.github.cawtoz.parking.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
