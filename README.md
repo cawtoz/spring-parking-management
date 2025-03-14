@@ -23,7 +23,6 @@ This project is a **Spring Boot-based** parking management system designed to st
 
 ## 📌 Requirements
 Before installing, ensure you have:
-
 - Java 17+
 - Maven 3+
 - MySQL 8+
@@ -32,15 +31,17 @@ Before installing, ensure you have:
 ## 🛠 Installation
 Follow these steps to set up the project in your environment:
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/cawtoz/parking-management.git
    cd parking-management
    ```
-
-2. **Set up environment variables:**
-
-   Rename `.env.example` to `.env` and configure database and email settings:
+2. Configure environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   
+3. Set up the database and email notifications in the .env file:
    ```ini
    # Database Config
    DB_HOST=localhost
@@ -54,7 +55,7 @@ Follow these steps to set up the project in your environment:
    MAIL_PASSWORD=your-app-password
    ```
 
-3. **Build and run the application:**
+4. Build and run the application:
    ```bash
    mvn clean install
    mvn spring-boot:run
