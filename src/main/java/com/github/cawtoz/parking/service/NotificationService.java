@@ -35,4 +35,22 @@ public class NotificationService {
         }
     }
 
+
+    @Async
+    public void sendEntryNotification(String recipient, String vehiclePlate, String owner, String parkingName) {
+        String subject = "Nuevo ingreso de vehículo";
+        String message = "El vehículo con placa " + vehiclePlate +
+                " ingresó al parqueadero " + parkingName +
+                " a nombre de " + owner + ".";
+        sendEmail(recipient, subject, message);
+    }
+
+    @Async
+    public void sendExitNotification(String recipient, String vehiclePlate, double amountCharged) {
+        String subject = "Salida de vehículo registrada";
+        String message = "El vehículo con placa " + vehiclePlate +
+                " ha salido. Monto cobrado: $" + amountCharged;
+        sendEmail(recipient, subject, message);
+    }
+
 }
