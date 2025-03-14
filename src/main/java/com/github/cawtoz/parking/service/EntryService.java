@@ -5,6 +5,9 @@ import com.github.cawtoz.parking.model.Parking;
 import com.github.cawtoz.parking.model.Space;
 import com.github.cawtoz.parking.repository.EntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -17,6 +20,7 @@ public class EntryService {
     @Autowired
     private EntryRepository entryRepository;
 
+    @CacheEvict(value = {"entriesToday", "entriesByParking"}, key = "#entry.space.parking.id")
     public Entry save(Entry entry) {
         return entryRepository.save(entry);
     }
@@ -29,6 +33,8 @@ public class EntryService {
         return entryRepository.findById(id).orElse(null);
     }
 
+    @Async
+    @CacheEvict(value = {"entriesToday", "entriesByParking"}, allEntries = true)
     public void deleteById(Long id) {
         entryRepository.deleteById(id);
     }
@@ -37,6 +43,7 @@ public class EntryService {
         return entryRepository.findBySpace(space);
     }
 
+    @Cacheable(value = "entriesByParking", key = "#parking.id")
     public List<Entry> getEntriesByParking(Parking parking) {
         return entryRepository.findBySpaceParking(parking);
     }
@@ -45,10 +52,12 @@ public class EntryService {
         return entryRepository.findFirstBySpaceOrderByTimestampDesc(space);
     }
 
+    @Cacheable(value = "entriesByTimeframe", key = "#parking.id + '_' + #startOfDay.toString() + '_' + #endOfDay.toString()")
     public List<Entry> getEntriesWithinTimeframeAndParking(Parking parking, LocalDateTime startOfDay, LocalDateTime endOfDay) {
         return entryRepository.findBySpaceParkingAndTimestampBetween(parking, startOfDay, endOfDay);
     }
 
+    @Cacheable(value = "entriesToday", key = "#parking.id")
     public long getTotalEntriesToday(Parking parking) {
         LocalDate today = LocalDate.now();
         LocalDateTime startOfDay = today.atStartOfDay();

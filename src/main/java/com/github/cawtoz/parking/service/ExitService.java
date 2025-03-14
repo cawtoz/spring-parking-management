@@ -5,6 +5,9 @@ import com.github.cawtoz.parking.model.Entry;
 import com.github.cawtoz.parking.model.Parking;
 import com.github.cawtoz.parking.repository.ExitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -17,6 +20,7 @@ public class ExitService {
     @Autowired
     private ExitRepository exitRepository;
 
+    @CacheEvict(value = {"exitsToday", "exitsByParking"}, key = "#exit.entry.space.parking.id")
     public Exit save(Exit exit) {
         return exitRepository.save(exit);
     }
@@ -29,6 +33,8 @@ public class ExitService {
         return exitRepository.findById(id).orElse(null);
     }
 
+    @Async
+    @CacheEvict(value = {"exitsToday", "exitsByParking"}, allEntries = true)
     public void deleteById(Long id) {
         exitRepository.deleteById(id);
     }
@@ -37,6 +43,7 @@ public class ExitService {
         return exitRepository.findByEntry(entry);
     }
 
+    @Cacheable(value = "exitsByParking", key = "#parking.id")
     public List<Exit> getExitsByParking(Parking parking) {
         return exitRepository.findByEntry_Space_Parking(parking);
     }
@@ -49,10 +56,12 @@ public class ExitService {
         return exitRepository.findFirstByEntryOrderByTimestampDesc(entry);
     }
 
+    @Cacheable(value = "exitsByTimeframe", key = "#parking.id + '_' + #startOfDay.toString() + '_' + #endOfDay.toString()")
     public List<Exit> getExitsWithinTimeframeAndParking(Parking parking, LocalDateTime startOfDay, LocalDateTime endOfDay) {
         return exitRepository.findByTimestampBetweenAndEntry_Space_Parking(startOfDay, endOfDay, parking);
     }
 
+    @Cacheable(value = "exitsToday", key = "#parking.id")
     public long getTotalExitsToday(Parking parking) {
         LocalDate today = LocalDate.now();
         LocalDateTime startOfDay = today.atStartOfDay();
