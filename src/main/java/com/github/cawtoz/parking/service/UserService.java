@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
@@ -22,6 +23,7 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Transactional
     @CacheEvict(value = "users", key = "#user.username")
     public User register(User user) {
         parkingRepository.save(user.getParking());

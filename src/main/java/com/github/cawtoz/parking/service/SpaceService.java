@@ -8,6 +8,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class SpaceService {
     @Autowired
     private SpaceRepository spaceRepository;
 
+    @Transactional
     @CacheEvict(value = {"availableSpaces", "occupiedSpaces", "spacesByParking"}, key = "#space.parking.id")
     public Space save(Space space) {
         return spaceRepository.save(space);
@@ -30,12 +32,14 @@ public class SpaceService {
         return spaceRepository.findById(id).orElse(null);
     }
 
+    @Transactional
     @Async
     @CacheEvict(value = {"availableSpaces", "occupiedSpaces", "spacesByParking"}, allEntries = true)
     public void deleteById(Long id) {
         spaceRepository.deleteById(id);
     }
 
+    @Transactional
     @CacheEvict(value = {"availableSpaces", "occupiedSpaces", "spacesByParking"}, key = "#id")
     public void deactivateById(Long id) {
         Space space = findById(id);
@@ -74,6 +78,7 @@ public class SpaceService {
         return spaceRepository.findByParkingAndIsOccupiedAndIsActive(parking, true, true);
     }
 
+    @Transactional
     @Async
     public void updateSpaceStatusAsync(Space space, boolean occupied) {
         space.setOccupied(occupied);

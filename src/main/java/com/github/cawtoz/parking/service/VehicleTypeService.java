@@ -7,6 +7,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ public class VehicleTypeService {
     @Autowired
     private VehicleTypeRepository vehicleTypeRepository;
 
+    @Transactional
     @CacheEvict(value = {"vehicleTypes", "vehicleType"}, allEntries = true)
     public VehicleType save(VehicleType vehicleType) {
         return vehicleTypeRepository.save(vehicleType);
@@ -31,6 +33,7 @@ public class VehicleTypeService {
         return vehicleTypeRepository.findById(id).orElse(null);
     }
 
+    @Transactional
     @Async
     @CacheEvict(value = {"vehicleTypes", "vehicleType"}, allEntries = true)
     public void deleteById(Long id) {

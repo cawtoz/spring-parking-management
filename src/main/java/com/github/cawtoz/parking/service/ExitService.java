@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -20,6 +21,7 @@ public class ExitService {
     @Autowired
     private ExitRepository exitRepository;
 
+    @Transactional
     @CacheEvict(value = {"exitsToday", "exitsByParking"}, key = "#exit.entry.space.parking.id")
     public Exit save(Exit exit) {
         return exitRepository.save(exit);
@@ -33,6 +35,7 @@ public class ExitService {
         return exitRepository.findById(id).orElse(null);
     }
 
+    @Transactional
     @Async
     @CacheEvict(value = {"exitsToday", "exitsByParking"}, allEntries = true)
     public void deleteById(Long id) {
