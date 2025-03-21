@@ -8,6 +8,7 @@ WORKDIR /app
 COPY pom.xml ./
 COPY .mvn .mvn
 COPY mvnw ./
+RUN chmod +x mvnw
 
 # Descarga las dependencias necesarias antes de copiar todo el código
 RUN ./mvnw dependency:resolve
