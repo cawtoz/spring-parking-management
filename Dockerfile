@@ -1,5 +1,5 @@
 # Usa una imagen base más ligera para el build
-FROM maven:3.9-openjdk-21-slim AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 # Establece el directorio de trabajo
 WORKDIR /app
