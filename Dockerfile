@@ -1,19 +1,34 @@
-# Build
-FROM eclipse-temurin:21-jdk-alpine as build
-WORKDIR /build
+# Usa una imagen base más ligera para el build
+FROM maven:3.9-openjdk-21-slim AS build
 
-COPY .mvn .mvn
-COPY mvnw .
-COPY pom.xml .
-RUN chmod +x mvnw
-RUN ./mvnw dependency:go-offline
-
-COPY src ./src
-RUN ./mvnw clean package -DskipTests && rm -rf ~/.m2/repository
-
-# Run
-FROM eclipse-temurin:21-jre-alpine
+# Establece el directorio de trabajo
 WORKDIR /app
-COPY --from=build /build/target/*.jar app.jar
+
+# Copia solo los archivos necesarios para resolver dependencias primero (optimiza la caché)
+COPY pom.xml ./
+COPY .mvn .mvn
+COPY mvnw ./
+
+# Descarga las dependencias necesarias antes de copiar todo el código
+RUN ./mvnw dependency:resolve
+
+# Copia el código fuente al contenedor
+COPY src ./src
+
+# Compila la aplicación sin correr los tests
+RUN ./mvnw clean package -DskipTests
+
+# Usa una imagen base ligera para la ejecución
+FROM openjdk:21-jdk-slim
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Expone el puerto
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+
+# Copia el archivo JAR compilado desde la fase de construcción
+COPY --from=build /app/target/spring-parking-management-0.0.1-SNAPSHOT.jar app.jar
+
+# Comando de inicio
+ENTRYPOINT ["java", "-jar", "app.jar"]
